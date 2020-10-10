@@ -1,3 +1,4 @@
+import datetime
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -5,17 +6,23 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    some_text = "Thanks for visiting!"
+    current_year = datetime.datetime.now().year
+    return render_template("index.html", some_text=some_text, current_year=current_year)
 
 
 @app.route("/about")
 def about_me():
-    return render_template("about.html")
+    some_text = "Thanks for visiting!"
+    current_year = datetime.datetime.now().year
+    return render_template("about.html", some_text=some_text, current_year=current_year)
 
 
 @app.route("/portfolio")
 def portfolio():
-    return render_template("portfolio.html")
+    some_text = "Thanks for visiting!"
+    current_year = datetime.datetime.now().year
+    return render_template("portfolio.html", some_text=some_text, current_year=current_year)
 
 
 @app.route("/portfolio/fakebook")

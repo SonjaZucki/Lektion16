@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SmartNinja with Jinja</title>
+
+        <link rel="stylesheet" href="/static/css/main-style.css">
+    </head>
+
+    <body>
+    <h1>Welcome to my Personal Website!</h1>
+    <p>
+    <a href="/">Home</a>,
+    <a href="/about">About me</a>,
+    <a href="/portfolio">Portfolio</a>
+    </p>
+    <hr>
+
+    {% block content %}
+    {% endblock content %}
+    <br/>
+    <hr>
+    <p>{{some_text}}</p>
+    <p>Date: {{current_year}}</p>
+    </body>
+</html>
